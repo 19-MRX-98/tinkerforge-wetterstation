@@ -1,0 +1,12 @@
+# .gitignore
+githubscripts/
+/webapp/_olds/
+/adminpanel/_olds/
+/adminpanel/schnipsel/
+/dbc/dbc_interface_v1/
+/dbc/not_needed_anymore/
+/dbc/tkf_interface_v1
+plotter/
+/updates/bootstrap-5.3.3-dist/
+/webapp/_olds/
+/webapp/docker/

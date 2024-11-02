@@ -1,0 +1,19 @@
+ services:
+      adminpanel:
+        container_name: ${container_name}
+        build: .
+        volumes:
+          - ${APACHE_DIR}:/var/www/html
+          - ${APACHE_CONF_FILE}:/etc/apache2/apache2.conf
+          - ${TKF_COM_LOG_DIR}:/tkf_external_logs
+          - ${TKF_COM_INI}:/tkf_ini/comserver.ini
+          - ${TKF_CP_DOCKER_DEV}:/tkf_cp_docker
+          - ${TKF_PLOTTER_LOG_DIR}:/tkf_plotter_logs
+          - ${WEBAPP_INI}:/tkf_ini/webapp.ini
+          - ${WEBAPP_LOG_DIR}:/tkf_webapp_logs
+          - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+          - ${STD_WEBSRV_PORT}:80
+          - ${SSL_WEBSRV_PORT}:443
+        restart: always
+        

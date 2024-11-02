@@ -1,0 +1,9 @@
+services:
+  tkf_db_v3:
+    container_name: ${container_name}
+    image: ghcr.io/19-mrx-98/tkf_db-latest:latest
+    ports:
+      - ${DB_STD_PORT}:3306
+    volumes:
+      - ${VOL_OS_PATH}:${CONT_PATH}
+    restart: always

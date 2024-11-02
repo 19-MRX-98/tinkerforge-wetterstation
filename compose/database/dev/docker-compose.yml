@@ -1,0 +1,9 @@
+services:
+  tkf_db_v3:
+    container_name: ${container_name}
+    image: mariadb
+    ports:
+      - ${DB_STD_PORT}:3306
+    volumes:
+      - ${VOL_OS_PATH}:${CONT_PATH}
+    restart: always

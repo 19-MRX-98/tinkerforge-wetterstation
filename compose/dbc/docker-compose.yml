@@ -1,0 +1,9 @@
+services:
+  db_connector:
+    container_name: ${container_name}
+    image: ghcr.io/19-mrx-98/tkf_dbconnector_v.1.13
+    ports:
+      - ${STD_WEBSRV_PORT}:8000
+    volumes: 
+      - ${APACHE_DIR}:/tkf_com 
+    restart: always
